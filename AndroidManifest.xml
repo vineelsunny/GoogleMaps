@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.allplacesnearu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+     The following two permissions are not required to use
+     Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <permission
+        android:name="com.example.allplacesnearu.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.allplacesnearu.permission.MAPS_RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity  
+            android:name="com.example.allplacesnearu.KleemAppTestActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.allplacesnearu.Geocoding"></activity>
+        <activity android:name="com.example.allplacesnearu.DirectionActivity"></activity> 
+       <activity android:name="com.example.allplacesnearu.DirectionDestActivity" android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name="com.example.allplacesnearu.DirectionIntro" android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name="com.example.allplacesnearu.TestMapDummyActivity" android:theme="@android:style/Theme.Dialog"></activity>
+        <activity android:name="com.example.allplacesnearu.ReverseGeocoding"></activity>
+        <activity android:name="com.example.allplacesnearu.MainActivityNew"></activity>
+        <activity android:name="com.example.allplacesnearu.NearPlacesActivity"></activity> 
+       <activity android:name="com.example.allplacesnearu.StreetViewActivity"></activity>
+         <meta-data
+            android:name="com.google.android.gms.version"
+
+            android:value="@integer/google_play_services_version" />
+
+         <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBuKIUEl5tydIiSnGMw-CdPzng4HtuAkz0" />
+     
+    </application>
+
+</manifest>

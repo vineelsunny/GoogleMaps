@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal"
+    android:id="@+id/lineaer">
+     <Spinner
+        android:id="@+id/spinner12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_weight="2" />
+    
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Places"
+        android:id="@+id/findplacesbutton"
+        android:layout_weight="0.5" />
+</LinearLayout>
+   
+
+    <ListView
+        android:id="@+id/httptestlist_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineaer"
+         >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spr_place_type"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+             />
+        <Spinner
+            android:id="@+id/spr_dist_type"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+             />
+        <Spinner
+            android:id="@+id/spr_map_type"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+             />
+        <Button
+            android:id="@+id/btn_find"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="Find" />
+        </LinearLayout>
+
+    <fragment
+        android:id="@+id/map123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+
+
+
+
+</LinearLayout>
